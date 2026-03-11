@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: guestbook
+  name: webapp
   namespace: argocd
   finalizers:
     - resources-finalizer.argocd.argoproj.io
@@ -11,10 +11,10 @@ spec:
     namespace: default
     server: 'https://kubernetes.default.svc'
   source:
-    path: guestbook
-    repoURL: 'https://github.com/sysinstructor/cicd-demo-config'
+    path: webapp
+    repoURL: 'https://github.com/sysinstructor/webapp-config'
     targetRevision: master
-  project: dev
+  project: cicd
   syncPolicy:
     automated: null
     syncOptions:

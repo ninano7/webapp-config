@@ -1,14 +1,14 @@
 apiVersion: argoproj.io/v1alpha1
 kind: AppProject
 metadata:
-  name: dev
+  name: cicd
   namespace: argocd
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
-  description: dev Project
+  description: CICD Project
   sourceRepos:
-  - 'https://github.com/sysinstructor/cicd-demo-config.git'
+  - 'https://github.com/sysinstructor/webapp-config.git'
 
   destinations:
   - namespace: default
