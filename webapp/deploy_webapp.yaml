@@ -14,5 +14,5 @@ spec:
         app: webapp
     spec:
       containers:
-        - image: nissi75/webapp:1.0
+        - image: nissi75/webapp:20260417051831_1
           name: webapp-container
